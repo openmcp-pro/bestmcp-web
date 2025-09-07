@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Zap, Shield, Globe, Rocket, Copy, Check } from 'lucide-react'
+import { Zap, Shield, Globe, Rocket, Copy, Check, Star, Users, Clock, TrendingUp } from 'lucide-react'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -64,16 +64,76 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
+          <div className="badge">🚀 Now Live • Join 10,000+ AI Developers</div>
           <h1>BestMCP</h1>
-          <p>Optimized MCP Services for AI Agents</p>
-          <p>Powered by OpenMCP • Hosted at mcp.bestmcp.io</p>
+          <p>The Ultimate MCP Platform for AI Agents</p>
+          <p style={{ fontSize: '1.2rem', marginBottom: '3rem' }}>Powered by OpenMCP • Enterprise-Ready • Lightning Fast</p>
+          <div className="cta-section">
+            <a href="#api-key" style={{ 
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 
+              color: 'white', 
+              padding: '1rem 2.5rem', 
+              borderRadius: '50px', 
+              textDecoration: 'none', 
+              fontWeight: '600',
+              fontSize: '1.1rem',
+              display: 'inline-block',
+              marginRight: '1rem',
+              marginBottom: '1rem',
+              boxShadow: '0 10px 30px rgba(102, 126, 234, 0.3)',
+              transition: 'all 0.3s ease'
+            }}>Get Free API Key</a>
+            <a href="#features" style={{ 
+              background: 'rgba(255, 255, 255, 0.2)', 
+              color: '#2d3748', 
+              padding: '1rem 2.5rem', 
+              borderRadius: '50px', 
+              textDecoration: 'none', 
+              fontWeight: '600',
+              fontSize: '1.1rem',
+              display: 'inline-block',
+              border: '2px solid rgba(102, 126, 234, 0.3)',
+              transition: 'all 0.3s ease'
+            }}>Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="stats-section">
+        <div className="container">
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#2d3748' }}>Trusted by Developers Worldwide</h2>
+          <p style={{ fontSize: '1.2rem', color: '#4a5568', marginBottom: '2rem' }}>Join the growing community of AI developers using BestMCP</p>
+          <div className="stats-grid">
+            <div className="stat">
+              <Users className="feature-icon" style={{ margin: '0 auto 1rem', color: '#48bb78' }} />
+              <span className="stat-number">10K+</span>
+              <span className="stat-label">Active Developers</span>
+            </div>
+            <div className="stat">
+              <TrendingUp className="feature-icon" style={{ margin: '0 auto 1rem', color: '#ed8936' }} />
+              <span className="stat-number">99.9%</span>
+              <span className="stat-label">Uptime</span>
+            </div>
+            <div className="stat">
+              <Clock className="feature-icon" style={{ margin: '0 auto 1rem', color: '#9f7aea' }} />
+              <span className="stat-number">&lt;50ms</span>
+              <span className="stat-label">Average Latency</span>
+            </div>
+            <div className="stat">
+              <Star className="feature-icon" style={{ margin: '0 auto 1rem', color: '#f6ad55' }} />
+              <span className="stat-number">4.9/5</span>
+              <span className="stat-label">Developer Rating</span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="features">
+      <section className="features" id="features">
         <div className="container">
           <h2>Why Choose BestMCP?</h2>
+          <p style={{ textAlign: 'center', fontSize: '1.2rem', color: '#4a5568', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem' }}>Experience the next generation of MCP services with enterprise-grade performance, security, and reliability.</p>
           <div className="features-grid">
             <div className="feature">
               <Zap className="feature-icon" />
@@ -100,7 +160,7 @@ function App() {
       </section>
 
       {/* API Key Generation Section */}
-      <section className="api-section">
+      <section className="api-section" id="api-key">
         <div className="container">
           <div className="api-form">
             <h2 style={{ textAlign: 'center', marginBottom: '2rem', color: '#2d3748' }}>
